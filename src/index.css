@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  --color-primary: #2f6481;
+  --color-primary-dark: #0e4c68;
+  --color-primary-container: #a1d4f5;
+  --color-on-primary-container: #265c79;
+  --color-primary-fixed: #c5e7ff;
+  --color-primary-fixed-dim: #9acdee;
+  
+  --color-secondary: #4f616d;
+  --color-secondary-container: #cfe2f1;
+  --color-on-secondary-container: #536571;
+  
+  --color-tertiary: #725380;
+  --color-tertiary-container: #e6c0f5;
+  --color-on-tertiary-container: #6a4b78;
+  --color-tertiary-fixed: #f6d9ff;
+  --color-on-tertiary-fixed: #2a0f39;
+  
+  --color-surface: #ffffff;
+  --color-surface-bright: #f9f9fc;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f6;
+  --color-surface-container: #edeef0;
+  --color-surface-container-high: #e7e8eb;
+  --color-surface-container-highest: #e1e2e5;
+  
+  --color-outline: #71787e;
+  --color-outline-variant: #c1c7cd;
+  
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #41484d;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c7cd;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71787e;
+}
+
+/* Print Receipt Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 10px;
+    background: white;
+    color: black;
+    box-shadow: none !important;
+  }
+}
